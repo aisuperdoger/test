@@ -19,12 +19,12 @@ def server_status(SERVER):
     return server_status
 '''
 
-'''
+
 def send_message(SEND_KEY):
     sd_message = requests.post(
         "https://sctapi.ftqq.com/" + SEND_KEY + ".send?title=GladosCheck" + "&desp=" + message_status + message_days)
     print(sd_message)
-'''
+
 
 
 
@@ -84,7 +84,7 @@ if __name__ == '__main__':
     message_days = "days:"+list2[6]
     print(message_days)
 
-#    print(send_message(config.SEND_KEY))
+    print(send_message(config.SEND_KEY))
 
 
 
