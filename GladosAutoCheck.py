@@ -19,10 +19,14 @@ def server_status(SERVER):
     return server_status
 '''
 
+'''
 def send_message(SEND_KEY):
     sd_message = requests.post(
         "https://sctapi.ftqq.com/" + SEND_KEY + ".send?title=GladosCheck" + "&desp=" + message_status + message_days)
     print(sd_message)
+'''
+
+
 
 url='https://glados.rocks/api/user/checkin'
 
@@ -79,7 +83,8 @@ if __name__ == '__main__':
     #取下标为6的值（会员天数）
     message_days = "days:"+list2[6]
     print(message_days)
-    print(send_message(config.SEND_KEY))
+
+#    print(send_message(config.SEND_KEY))
 
 
 
