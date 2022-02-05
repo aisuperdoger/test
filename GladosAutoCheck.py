@@ -41,10 +41,10 @@ if __name__ == '__main__':
     #取下标为1的列表值（签到状态）
     #print(list1[1])
     if list1[1] == "Checkin! Get 1 Day":
-        message_status = "Checkin! Get 1 Day~~"
+        message_status = "签到成功咯~会员天数+1"
         print(message_status)
     elif list1[1] == "Please Try Tomorrow":
-        message_status = "Please Try Tomorrow~~"
+        message_status = "下次再来咯~"
         print(message_status)
     else:
         print(list1[1])
@@ -70,7 +70,7 @@ if __name__ == '__main__':
     #将字典的每个值转化为列表形式
     list2 = list(dict2.values())
     #取下标为6的值（会员天数）
-    message_days = "days:"+list2[6]
+    message_days = "会员天数还剩"+list2[6]
     print(message_days)
 
 
