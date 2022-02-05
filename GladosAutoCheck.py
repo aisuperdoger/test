@@ -13,17 +13,6 @@ def headers_handle(KOA_SESS, KOA_SESS_SIG):
         "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Mobile Safari/537.36 Edg/97.0.1072.62",'Cookie': both,
         'Referer': 'https://glados.rocks/login'}
     return headers
-'''
-def server_status(SERVER):
-    server_status = SERVER
-    return server_status
-'''
-
-
-def send_message(SEND_KEY):
-    sd_message = requests.post(
-        "https://sctapi.ftqq.com/" + SEND_KEY + ".send?title=GladosCheck" + "&desp=" + message_status + message_days)
-    print(sd_message)
 
 
 
@@ -84,7 +73,7 @@ if __name__ == '__main__':
     message_days = "days:"+list2[6]
     print(message_days)
 
-    print(send_message(config.SEND_KEY))
+
 
 
 
