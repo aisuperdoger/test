@@ -1,6 +1,5 @@
 # -*- coding: UTF-8 -*-
 
-import urllib.request,urllib.parse
 import requests
 import config
 
@@ -15,6 +14,13 @@ def headers_handle(KOA_SESS, KOA_SESS_SIG):
         'Referer': 'https://glados.rocks/login'}
     return headers
 
+def server_status(SERVER):
+    server_status = SERVER
+    return server_status
+
+def send_key(SEND_KEY):
+    send_key = SEND_KEY
+    return send_key
 
 url='https://glados.rocks/api/user/checkin'
 
@@ -40,9 +46,11 @@ if __name__ == '__main__':
     #取下标为1的列表值（签到状态）
     #print(list1[1])
     if list1[1] == "Checkin! Get 1 Day":
-        print("客官~签到成功咯~")
+        message_status = "Checkin! Get 1 Day~~"
+        print(message_status)
     elif list1[1] == "Please Try Tomorrow":
-        print("客官~明天再来哦~")
+        message_status = "Please Try Tomorrow~~"
+        print(message_status)
     else:
         print(list1[1])
 
@@ -67,5 +75,12 @@ if __name__ == '__main__':
     #将字典的每个值转化为列表形式
     list2 = list(dict2.values())
     #取下标为6的值（会员天数）
-    print("您的会员天数："+list2[6])
+    message_days = "days:"+list2[6]
+
+    print(message_days)
+
+    if server_status() == "on":
+        send_message = requests.post("https://sctapi.ftqq.com/" + send_key() + ".send?title=GladosCheck" + "&desp=" + message_status + message_days)
+
+
 
