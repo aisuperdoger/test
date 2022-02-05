@@ -19,3 +19,18 @@
 填完secret值后，在自己仓库点亮star即可开始运行
 
 ![image-20220206031659058](D:\GladosAutoCheck\doc\image-20220206031659058.png)
+
+
+
+运行效果如下图
+
+![image-20220206032210655](D:\GladosAutoCheck\doc\image-20220206032210655.png)
+
+另外该脚本会在每天早上5点运行一次，需要修改运行事件可以把./.github/workflows/gladosCheck.yml的第八行
+
+```
+- cron: '0 21 * * *'    //国际时间
+```
+
+修改数字即可
+
