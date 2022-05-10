@@ -22,7 +22,7 @@ url='https://glados.rocks/api/user/checkin'
 
 
 data = {
-    'token':'glados_network',
+    'token':'glados.network',
 }
 if __name__ == '__main__':
     headers = headers_handle(config.KOA_SESS,config.KOA_SESS_SIG)
