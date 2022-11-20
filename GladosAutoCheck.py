@@ -22,7 +22,7 @@ url='https://glados.rocks/api/user/checkin'
 
 
 data = {
-    'token':'glados.network'
+    'token':'glados.network',
 }
 if __name__ == '__main__':
     headers = headers_handle(config.KOA_SESS,config.KOA_SESS_SIG)
@@ -48,7 +48,7 @@ if __name__ == '__main__':
         print(message_status)
     else:
         print(list1[1])
-
+'''
     #列表下标为2的值可以当作字典来处理
     str = str(list1[2])
     #先把方括号去掉
@@ -73,7 +73,7 @@ if __name__ == '__main__':
     message_days = "会员天数还剩"+list2[6]
     print(message_days)
 
-
+'''
 
 
 
